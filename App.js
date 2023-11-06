@@ -4,7 +4,8 @@ import Animated, {
   useAnimatedStyle,
   Easing,
 } from "react-native-reanimated";
-import { View, Button } from "react-native";
+import { View, Button } from "react-native";//pavan
+
 
 export default function AnimatedStyleUpdateExample(props) {
   const randomWidth = useSharedValue(10);
