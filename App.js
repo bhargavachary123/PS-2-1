@@ -4,8 +4,7 @@ import Animated, {
   useAnimatedStyle,
   Easing,
 } from "react-native-reanimated";
-import { View, Button } from "react-native";//pavan
-
+import { View, Button } from "react-native";
 
 export default function AnimatedStyleUpdateExample(props) {
   const randomWidth = useSharedValue(10);
@@ -22,26 +21,29 @@ export default function AnimatedStyleUpdateExample(props) {
   });
 
   return (
-    <View
-      style={{
-        flex: 1,
-        alignItems: "center",
-        justifyContent: "center",
-        flexDirection: "column",
-      }}
-    >
-      <Animated.View
-        style={[
-          { width: 100, height: 80, backgroundColor: "black", margin: 30 },
-          style,
-        ]}
-      />
-      <Button
-        title="toggle"
-        onPress={() => {
-          randomWidth.value = Math.random() * 350;
-        }}
-      />
+    <View>
+      <Text>rehabiltationScreen</Text>
     </View>
   );
 }
+
+const Drawer = createDrawerNavigator();
+const Tab = createMaterialBottomTabNavigator();
+
+function App() {
+  return (
+    <NavigationContainer>
+      <Drawer.Navigator initialRouteName="myTabs">
+        {/* Add your drawer screens here */}
+        <Drawer.Screen name="myTabs" component={myTabs} />
+        <Drawer.Screen name="Settings" component={SettingsScreen} />
+        <Drawer.Screen name="rights" component={rightsScreen} />
+        <Drawer.Screen name="legalaid" component={legalaidScreen} />
+        <Drawer.Screen name="rehabiltation" component={rehabiltationScreen} />
+        {/* Add more screens as needed */}
+      </Drawer.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export default App;
