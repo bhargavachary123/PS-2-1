@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "newApp",
-    "slug": "newApp",
+    "name": "newapp",
+    "slug": "trailApp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

@@ -1,4 +1,4 @@
-# Reanimated example
+# Reanimated example2
 
 <p>
   <!-- iOS -->
@@ -8,7 +8,7 @@
   <!-- Web -->
 </p>
 
-## 🚀 How to use
+## 🚀 How to use 
 
 > `npx create-react-native-app my-app -t with-reanimated`
 

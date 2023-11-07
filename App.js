@@ -1,49 +1,31 @@
-import Animated, {
-  useSharedValue,
-  withTiming,
-  useAnimatedStyle,
-  Easing,
-} from "react-native-reanimated";
-import { View, Button } from "react-native";
+import React from 'react';
+import LawBot from './screens/lawbot'
 
-export default function AnimatedStyleUpdateExample(props) {
-  const randomWidth = useSharedValue(10);
 
-  const config = {
-    duration: 500,
-    easing: Easing.bezier(0.5, 0.01, 0, 1),
-  };
+import Rehabilation from './screens/Rehabilation';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-  const style = useAnimatedStyle(() => {
-    return {
-      width: withTiming(randomWidth.value, config),
-    };
-  });
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import HomeStackScreen from './routes/homeStackScreen';
+import LoginStackScreen from './routes/loginStackScreen';
+import MainScreen from './screens/mainScreen';
+import DrawerScreen from './screens/drawer';
 
+const Stack = createNativeStackNavigator(); 
+ //hell
+export default function App() {
   return (
-    <View>
-      <Text>rehabiltationScreen</Text>
-    </View>
-  );
+    <NavigationContainer> 
+     
+      <Stack.Navigator initialRouteName="LoginStackScreen"
+      screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="LoginStackScreen" component={LoginStackScreen} />
+        {/* <Stack.Screen name="DrawerScreen" component={DrawerScreen} /> */}
+
+      </Stack.Navigator>
+    </NavigationContainer>   
+  
+);
 }
 
-const Drawer = createDrawerNavigator();
-const Tab = createMaterialBottomTabNavigator();
-
-function App() {
-  return (
-    <NavigationContainer>
-      <Drawer.Navigator initialRouteName="myTabs">
-        {/* Add your drawer screens here */}
-        <Drawer.Screen name="myTabs" component={myTabs} />
-        <Drawer.Screen name="Settings" component={SettingsScreen} />
-        <Drawer.Screen name="rights" component={rightsScreen} />
-        <Drawer.Screen name="legalaid" component={legalaidScreen} />
-        <Drawer.Screen name="rehabiltation" component={rehabiltationScreen} />
-        {/* Add more screens as needed */}
-      </Drawer.Navigator>
-    </NavigationContainer>
-  );
-}
-
-export default App;
