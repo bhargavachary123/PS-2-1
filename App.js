@@ -1,23 +1,31 @@
-import * as React from 'react';
-import { View, Text } from 'react-native';
+import React from 'react';
+import LawBot from './screens/lawbot'
+
+
+import Rehabilation from './screens/Rehabilation';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import LoginScreen from './screens/LoginScreen';
-import SignupScreen from './screens/SignupScreen';
-import HomeScreen from './screens/HomeScreen';
-import mainScreen from './screens/HomeScreen';
-import LoginStackScreen from './routes/loginStack';
 
-const Stack = createNativeStackNavigator();
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import HomeStackScreen from './routes/homeStackScreen';
+import LoginStackScreen from './routes/loginStackScreen';
+import MainScreen from './screens/mainScreen';
+import DrawerScreen from './screens/drawer';
 
+const Stack = createNativeStackNavigator(); 
+ //hell
 export default function App() {
   return (
-   <NavigationContainer>
-    <Stack.Navigator initialRouteName="LoginStackScreen">
-      <Stack.Screen name="LoginStackScreen" component={LoginStackScreen} />
-      <Stack.Screen name="SignupScreen" component={SignupScreen} />
-      <Stack.Screen name="mainScreen" component={mainScreen} />
-    </Stack.Navigator>
-  </NavigationContainer>
-  );
+    <NavigationContainer> 
+     
+      <Stack.Navigator initialRouteName="LoginStackScreen"
+      screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="LoginStackScreen" component={LoginStackScreen} />
+        {/* <Stack.Screen name="DrawerScreen" component={DrawerScreen} /> */}
+
+      </Stack.Navigator>
+    </NavigationContainer>   
+  
+);
 }
+
