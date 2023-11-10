@@ -64,6 +64,6 @@ export default function Home({navigation}) {
     image: {
       height: 60,
       width:60,
+      borderRadius:'50%',
     },
-  })  
-
+  })

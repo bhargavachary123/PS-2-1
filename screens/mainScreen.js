@@ -9,6 +9,8 @@ import HomeStackScreen from '../routes/homeStackScreen';
 import LawBot from './lawbot';
 import Rehabilation from './Rehabilation';
 import ProfileScreen from './profileScreen';
+import Dashboard from '../information/dashboardinfo';
+
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -49,7 +51,7 @@ export default function MainScreen({navigation}) {
   )
         
       }}  />
-       <Tab.Screen name="LawBot" component={LawBot} 
+       <Tab.Screen name="Dashboard" component={Dashboard} 
       options={{
         tabBarLabel: 'Updates',
         tabBarIcon: ({ color }) => (

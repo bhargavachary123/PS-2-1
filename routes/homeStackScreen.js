@@ -9,6 +9,7 @@ import Lawyers from '../information/lawyersinfo';
 import Dashboard from '../information/dashboardinfo';
 import Bail from '../information/bailinfo';
 
+
 const HomeStack = createNativeStackNavigator();
 
 export default function HomeStackScreen() {
