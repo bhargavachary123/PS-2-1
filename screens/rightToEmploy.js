@@ -13,7 +13,7 @@ export default function rightToHuman() {
                           height: 700,}}/>
             </View>
               <YoutubePlayer style={styles.youtube}
-                      width={700}
+                      width={700} 
                       height={300}
                       play={false}
                       videoId={'kGShnVjzq94'}

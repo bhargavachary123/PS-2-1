@@ -5,6 +5,7 @@ import React from 'react';
 // import Rehabilation from './screens/Rehabilation';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import DrawerScreen from './screens/drawer';
 
 // import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 // import HomeStackScreen from './routes/homeStackScreen';
@@ -17,11 +18,12 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <NavigationContainer> 
-      <Stack.Navigator initialRouteName="LoginStackScreen"
+      {/* <Stack.Navigator initialRouteName="LoginStackScreen"
       screenOptions={{ headerShown: false }}>
         <Stack.Screen name="LoginStackScreen" component={LoginStackScreen} />
         {/* <Stack.Screen name="DrawerScreen" component={DrawerScreen} /> */}
-      </Stack.Navigator>
+      {/* </Stack.Navigator> */} */
+    <DrawerScreen />
     </NavigationContainer>   
   
 ); 
