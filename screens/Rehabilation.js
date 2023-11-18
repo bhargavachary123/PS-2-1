@@ -10,9 +10,23 @@ export default function Rehabilation() {
     ) 
 }
 const styles=StyleSheet.create({
-    texts:{
-        flex:1,
+    youtube:{
+        flexDirection:'column',
         alignItems:"center",
         justifyContent:"center",
-      }
+        marginBottom:20, 
+        marginTop:10,
+        padding:10,
+      },
+    texts: {
+        padding:10,
+        height:60,
+        width:'100%',
+        marginBottom:20,
+        fontSize:34,
+        fontWeight:'bold',
+        textAlign:'left',
+        backgroundColor:'black',
+        color:'white'
+    }
 })

@@ -16,5 +16,8 @@
 - Run `yarn start` or `npm run start` to try it out.
 
 ## 📝 Notes
-
 - [`react-native-reanimated` docs](https://docs.swmansion.com/react-native-reanimated/)
+- to install youtube-ifrmaes => npm install react-native-webview
+- and => npm install react-native-youtube-iframe
+
+- npm install expo-linking 

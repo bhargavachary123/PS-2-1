@@ -12,5 +12,5 @@ export default function LawBot() {
 const styles=StyleSheet.create({
     container : {
         flex:1,
-      }
+    }
 })

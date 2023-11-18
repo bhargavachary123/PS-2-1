@@ -3,11 +3,11 @@ import {Text, TextInput, View, Button,StyleSheet} from 'react-native';
 
 export default function ProfileScreen() {
     return (
-     <View style={styles.texts}>
+      <View style={styles.texts}>
       <Text>Hello User..!</Text>
         <Text>Profile Screen is under maintenance...
             please visit some other time..!!</Text>
-     </View>
+      </View>
     );
   }
   const styles=StyleSheet.create({

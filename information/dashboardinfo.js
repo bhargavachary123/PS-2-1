@@ -5,7 +5,7 @@ import { StyleSheet,View,Text } from "react-native";
 export default function Dashboard() {
     return (
         <View >
-            <Text> dashboard</Text>
+            <Text> dashboardinformation</Text>
         </View>
     )
 }

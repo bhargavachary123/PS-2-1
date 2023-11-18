@@ -76,13 +76,13 @@ const ChatBot = () => {
             keyExtractor={(item) => item.id.toString()}
             renderItem={({item}) => (
                 <View 
-                     style={{
+                    style={{
                         alignSelf: item.sender === 'user'? 'flex-end': 'flex-start',
                         marginBottom: 12,
                     }}
                 >
                     <View
-                       style={{
+                        style={{
                         backgroundColor: item.sender === 'user' ? '#007AFF': '#974683',
                         padding: 10,
                         borderRadius: 10,

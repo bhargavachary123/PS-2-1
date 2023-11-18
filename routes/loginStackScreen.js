@@ -12,10 +12,13 @@ export default function LoginStackScreen() {
   return (
     <LoginStack.Navigator >
         <LoginStack.Screen name="LoginScreen" component={LoginScreen} 
+
       options={{ headerShown: false }} />
       <LoginStack.Screen name="SignUpScreen" component={SignupScreen} 
+
         options={{ headerShown: false }} />
       <LoginStack.Screen name="DrawerScreen" component={DrawerScreen} 
+      
       options={{ headerShown: false }}
   />
     </LoginStack.Navigator>

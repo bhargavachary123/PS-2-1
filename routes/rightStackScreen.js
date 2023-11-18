@@ -2,7 +2,7 @@ import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import rightScreen from '../screens/rightScreen';
 import rightToAccomadate from '../screens/rightToAccomadate';
-import rightToCloth from '../screens/rightToColth';
+import rightToCloth from '../screens/rightToCloth';
 import rightToEmploy from '../screens/rightToEmploy';
 import rightToShelter from '../screens/rightToShelter';
 import rightToHuman from '../screens/rightToHuman';

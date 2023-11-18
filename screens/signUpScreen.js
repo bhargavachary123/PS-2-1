@@ -1,58 +1,77 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button , StyleSheet } from 'react-native';
+import { View, Text, TextInput, Button, StyleSheet, ImageBackground } from 'react-native';
+const image = {uri:"https://wallpapers.com/images/featured/jail-background-qbmoztosi7bm3tcu.jpg"}
 
 const SignupScreen = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-
   return (
-    <View style={styles.container1}>
-      <Text style={styles.hea1}>Register Here..</Text>
-      <TextInput style={styles.inp1}
-        placeholder="Email"
-        onChangeText={(text) => setEmail(text)}
-      />
-      <TextInput style={styles.inp1}
-        placeholder="Password"
-        secureTextEntry
-        onChangeText={(text) => setPassword(text)}
-      />
-        <TextInput style={styles.inp1}
-        placeholder="Confirm Password"
-        secureTextEntry
-        onChangeText={(text) => setPassword(text)}
-      />
-      <View style={styles.butt1}>
-      <Button  title="Back to Login in Screen" onPress={() => navigation.navigate('LoginScreen')}  />
+    <ImageBackground
+      source={image}
+      resizeMode='cover'
+      style={styles.backgroundImage}
+    >  
+      <View style={styles.container}>
+        <Text style={styles.title}>REGISTER NOW</Text>
+        <TextInput
+          style={styles.inp}
+          placeholder="Email"
+          onChangeText={(text) => setEmail(text)}
+        />
+        <TextInput
+          style={styles.inp}
+          placeholder="Password"
+          secureTextEntry
+          onChangeText={(text) => setPassword(text)}
+        />
+        <TextInput
+          style={styles.inp}
+          placeholder="Confirm Password"
+          secureTextEntry
+          onChangeText={(text) => setPassword(text)}
+        />
+        <View style={styles.butt}>
+          <Button title="Back to Login Screen" onPress={() => navigation.navigate('LoginScreen')} />
+        </View>
       </View>
-    </View>
+    </ImageBackground>
   );
 };
 
 const styles = StyleSheet.create({
-  container1: {
+  backgroundImage: {
+    flex: 1,
+    resizeMode: 'cover', 
+  },
+  container: {
     padding: 50,
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)', 
   },
-  hea1: {
-    padding: 30,
-     fontSize: 30,
-     fontFamily: "Roboto",
+  title: {
+    fontSize: 30,
+    fontFamily: 'Roboto',
+    marginBottom: 20,
+    color: '#fff', 
   },
-  inp1: {
+  inp: {
     borderRadius: 5,
     borderWidth: 2,
     height: 40,
     width: 200,
-    padding: 5,
-    margin: 20,
+    padding: 10,
+    marginVertical: 10,
+    borderColor: '#ccc',
+    backgroundColor: '#fff', 
+    color: '#333', 
   },
-  butt1: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems:"center",
+  butt: {
+    width: 250,
+    marginVertical: 20,
   },
 });
-
 
 export default SignupScreen;
