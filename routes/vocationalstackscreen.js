@@ -13,7 +13,7 @@ const VocationalStack = createNativeStackNavigator();
 
 export default function VocationalStackScreen() {
   return (
-    <VocationalStack.Navigator  initialRouteName='VocationalHome'>
+    <VocationalStack.Navigator >
             <VocationalStack.Screen name="VocationalHome" component={VocationalHome} 
     />
         <VocationalStack.Screen name="Carpentry" component={Carpentry} 
