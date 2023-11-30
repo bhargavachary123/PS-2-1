@@ -1,41 +1,109 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet, ImageBackground } from 'react-native';
-const image = {uri:"https://wallpapers.com/images/featured/jail-background-qbmoztosi7bm3tcu.jpg"}
+import { View, Text, TextInput, Button , StyleSheet, TouchableOpacity, Alert , ImageBackground} from 'react-native';
 
 const SignupScreen = ({ navigation }) => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [fdata, setFdata] = useState({
+      name: '',
+      email: '',
+      password: '',
+      cpassword: '',
+      dob: '',
+  })
+  const [errormsg, setErrormsg] = useState(null);
+  const Sendtobackend = () => {
+    // console.log(fdata);
+    if(fdata.name == '' || fdata.email == '' ||
+        fdata.password == '' || fdata.cpassword == '' ||
+        fdata.dob == ''
+      ) {
+      setErrormsg('All fields are required');
+      return;
+    }
+    else {
+      if (fdata.password != fdata.cpassword) {
+        setErrormsg('Password and Confirm password must be same');
+        return;
+      }
+      else {
+        fetch('http://10.0.2.2:3000/signup', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(fdata)
+          })
+          .then(res => res.json()).then(
+            data => {
+              // console.log(data);
+              if (data.error) {
+                setErrormsg(data.error);
+              }
+              else {
+                Alert.alert('account created successfuy..!!');
+                navigation.navigate('LoginScreen')
+              }
+            }
+          )
+      }
+    }
+  }
 
   return (
-    <ImageBackground
-      source={image}
-      resizeMode='cover'
-      style={styles.backgroundImage}
-    >  
-      <View style={styles.container}>
-        <Text style={styles.title}>REGISTER NOW</Text>
-        <TextInput
-          style={styles.inp}
-          placeholder="Email"
-          onChangeText={(text) => setEmail(text)}
-        />
-        <TextInput
-          style={styles.inp}
-          placeholder="Password"
-          secureTextEntry
-          onChangeText={(text) => setPassword(text)}
-        />
-        <TextInput
-          style={styles.inp}
-          placeholder="Confirm Password"
-          secureTextEntry
-          onChangeText={(text) => setPassword(text)}
-        />
-        <View style={styles.butt}>
-          <Button title="Back to Login Screen" onPress={() => navigation.navigate('LoginScreen')} />
-        </View>
+    <ImageBackground>
+    <View style={styles.container1}>
+      {
+        errormsg ? <Text style={styles.errormessage}>{errormsg}</Text> : null
+      }
+      <Text style={styles.hea1}>Register Here..</Text>
+      <TextInput style={styles.inp1}
+        placeholder="name"
+        onChangeText={(text) => setFdata({ ...fdata, name: text})}
+        onPressIn={() => setErrormsg(null)}
+      />
+        <TextInput style={styles.inp1}
+        placeholder="email"
+        onChangeText={(text) => setFdata({ ...fdata, email: text})}
+        onPressIn={() => setErrormsg(null)}
+
+      />
+         <TextInput style={styles.inp1}
+        placeholder="dob"
+        onChangeText={(text) => setFdata({ ...fdata, dob: text})}
+        onPressIn={() => setErrormsg(null)}
+
+      />
+      <TextInput style={styles.inp1}
+        placeholder="Password"
+        secureTextEntry
+        onChangeText={(text) => setFdata({ ...fdata, password: text})}
+        onPressIn={() => setErrormsg(null)}
+
+     />
+        <TextInput style={styles.inp1}
+        placeholder="Confirm Password"
+        secureTextEntry
+        onChangeText={(text) => setFdata({ ...fdata, cpassword: text})}
+        onPressIn={() => setErrormsg(null)}
+
+      />
+      <View style={styles.butt1}>
+      <TouchableOpacity
+          onPress={() => {
+            Sendtobackend();
+          }} >
+            <View style={styles.butt1}>
+            <Text>Signup</Text>
+            </View>
+          
+        </TouchableOpacity>  
       </View>
-    </ImageBackground>
+      <View>
+      <Text onPress={() => navigation.navigate('LoginScreen')}>
+              Already have an account? Login Here
+            </Text>      
+      </View>
+      </View>
+      </ImageBackground>
   );
 };
 
@@ -68,10 +136,19 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff', 
     color: '#333', 
   },
-  butt: {
-    width: 250,
-    marginVertical: 20,
+  butt1: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems:"center",
+    backgroundColor:'skyblue',
+    height:20,
+    width:50,
+    marginLeft:'30%',
   },
+  errormessage: {
+    color: 'red',
+    textAlign: 'center',
+  }
 });
 
 export default SignupScreen;
