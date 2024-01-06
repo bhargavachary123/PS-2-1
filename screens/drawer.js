@@ -52,11 +52,11 @@ export default function DrawerScreen({navigation}) {
                         source={require('../assets/title.gif')}
                       />
                       <Text style={styles.htext}>Kaidee</Text>
-                      <Text style={{color:'red', marginLeft:'30%',marginTop:'20'}}
+                      <Text style={{color:'red', marginLeft:'40%',marginTop:'20'}}
                       onPress={() => navigation.navigate('LoginScreen')}
                       >
                         
-                       Logout</Text>
+                       Logouh</Text>
                   
                       </View>
                    
@@ -90,9 +90,9 @@ const styles=StyleSheet.create({
   htext:{
     color:'skyblue',
     fontWeight: 'bold',
-    fontSize: 24,
+    fontSize: 20,
     flexDirection:'row',
-    paddingTop:7,
+   // paddingTop:7,
     paddingLeft:20,
     },
     headalign: {
