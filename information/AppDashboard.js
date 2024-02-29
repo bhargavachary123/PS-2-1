@@ -10,7 +10,7 @@ function AppDashBoard() {
 
   useEffect(() => {
     // Fetch the number of lawyers and prisoners from your API
-    fetch('http://10.0.2.2:3000/api/users/count')
+    fetch(`${API_KEY}api/users/count`)
       .then((response) => response.json())
       .then((data) => {
         console.log('start')
@@ -111,7 +111,7 @@ export default AppDashBoard;
 
 //   useEffect(() => {
 //     // Fetch the number of lawyers and prisoners from your API
-//   //   fetch('http://10.0.2.2:3000/api/users/count')
+//   //   fetch(`${API_KEY}api/users/count')
 //   //     .then((response) => response.json())
 //   //     .then((data) => {
 //   //       console.log('start')
@@ -130,7 +130,7 @@ export default AppDashBoard;
 //   //     });
 //   // }, []); // This useEffect will run once when the component mounts
 
-//   fetch('http://10.0.2.2:3000/api/messages/count')
+//   fetch(`${API_KEY}api/messages/count')
 //   .then((response) => response.json())
 //   .then((data) => {
 //     console.log('start')

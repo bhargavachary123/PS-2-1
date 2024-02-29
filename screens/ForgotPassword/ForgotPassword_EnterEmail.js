@@ -16,7 +16,7 @@ const ForgotPassword_EnterEmail = ({ navigation }) => {
 
         else {
             setLoading(true)
-            fetch('http://10.0.2.2:3000/verifyfp', {    
+            fetch(`${API_KEY}verifyfp', {    
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

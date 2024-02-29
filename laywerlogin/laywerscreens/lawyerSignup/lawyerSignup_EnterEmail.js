@@ -14,7 +14,7 @@
 //         // }
 //         // else {
 //         //     setLoading(true)
-//         //     fetch('http://10.0.2.2:3000/lawverify', {
+//         //     fetch(`${API_KEY}lawverify', {
 //         //         method: 'POST',
 //         //         headers: {
 //         //             'Content-Type': 'application/json'
@@ -104,7 +104,7 @@ const LawyerSignup_EnterEmail = ({ navigation }) => {
 
             // Make parallel requests to "lawverify" and "verify"
             Promise.all([
-                fetch('http://10.0.2.2:3000/lawverify', {
+                fetch(`${API_KEY}lawverify', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -113,7 +113,7 @@ const LawyerSignup_EnterEmail = ({ navigation }) => {
                         email: email
                     })
                 }).then(res => res.json()),
-                fetch('http://10.0.2.2:3000/verify', {
+                fetch(`${API_KEY}verify', {
                      method: 'POST',
                      headers: {
                     'Content-Type': 'application/json'

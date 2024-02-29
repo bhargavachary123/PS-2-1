@@ -16,7 +16,7 @@ const LawyerForgotPassword_EnterEmail = ({ navigation }) => {
 
         else {
             setLoading(true)
-            fetch('http://10.0.2.2:3000/lawverifyfp', {    
+            fetch(`${API_KEY}lawverifyfp', {    
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

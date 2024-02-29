@@ -20,7 +20,7 @@ const LawyerForgotPassword_ChoosePassword = ({ navigation, route }) => {
 
         else {
             setLoading(true);
-            fetch('http://10.0.2.2:3000/lawresetpassword', {
+            fetch(`${API_KEY}lawresetpassword', {
 
                 method: 'POST',
                 headers: {

@@ -21,7 +21,7 @@ const LawyerChangeDescription = ({ navigation }) => {
             setLoading(true)
             AsyncStorage.getItem('user').then(
                 data => {
-                    fetch('http://10.0.2.2:3000/lawsetdescription', {
+                    fetch(`${API_KEY}lawsetdescription', {
                         method: 'post',
                         headers: {
                             'Content-Type': 'application/json'

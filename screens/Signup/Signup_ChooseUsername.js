@@ -17,7 +17,7 @@ const Signup_ChooseUsername = ({ navigation, route }) => {
         }
         else {
             setLoading(true)
-            fetch('http://10.0.2.2:3000/changeusername', {
+            fetch(`${API_KEY}changeusername`, {
                 method: 'post',
                 headers: {
                     'Content-Type': 'application/json'

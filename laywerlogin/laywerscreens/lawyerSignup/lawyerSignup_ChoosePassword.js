@@ -21,7 +21,7 @@ const LawyerSignup_ChoosePassword = ({ navigation, route }) => {
         }
         else {
             setLoading(true)
-            fetch('http://10.0.2.2:3000/lawsignup', {
+            fetch(`${API_KEY}lawsignup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

@@ -9,7 +9,7 @@ const Prisoners = ({navigation}) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://10.0.2.2:3000/getAllUser', {
+        const response = await fetch(`${API_KEY}getAllUser', {
           method: 'GET',
         });
 

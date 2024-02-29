@@ -49,7 +49,7 @@ const UploadProfilePicture = ({ navigation }) => {
                 setLoading(true)
 
                 pickImage().then(url => {
-                    fetch('http://10.0.2.2:3000/setprofilepic', {
+                    fetch(`${API_KEY}setprofilepic', {
                         method: 'post',
                         headers: {
                             'Content-Type': 'application/json'

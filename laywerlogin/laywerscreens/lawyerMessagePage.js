@@ -38,7 +38,7 @@
 //     const loaddata = async () => {
 //         AsyncStorage.getItem('user')
 //             .then(async (value) => {
-//                 fetch('http://10.0.2.2:3000/lawuserdata', {
+//                 fetch(`${API_KEY}lawuserdata', {
 //                     method: 'POST',
 //                     headers: {
 //                         'Content-Type': 'application/json',
@@ -52,7 +52,7 @@
 //                             setOuruserdata(data.user)
 //                             setUserid(data.user._id)
 
-//                             fetch('http://10.0.2.2:3000/lawotheruserdata', {
+//                             fetch(`${API_KEY}lawotheruserdata', {
 //                                 method: 'POST',
 //                                 headers: {
 //                                     'Content-Type': 'application/json',
@@ -103,7 +103,7 @@
 //             senderid: userid,
 //             recieverid: fuserdata._id
 //         }
-//         fetch('http://10.0.2.2:3000/lawsavemessagetodb', {
+//         fetch(`${API_KEY}lawsavemessagetodb', {
 //             method: 'POST',
 //             headers: {
 //                 'Content-Type': 'application/json',
@@ -139,7 +139,7 @@
 
 
 //     const loadMessages = (temproomid) => {
-//         fetch('http://10.0.2.2:3000/lawgetmessages', {
+//         fetch(`${API_KEY}lawgetmessages', {
 //             method: 'POST',
 //             headers: {
 //                 'Content-Type': 'application/json',
@@ -361,7 +361,7 @@
 //     const loaddata = async () => {
 //         AsyncStorage.getItem('user')
 //             .then(async (value) => {
-//                 fetch('http://10.0.2.2:3000/lawuserdata', {
+//                 fetch(`${API_KEY}lawuserdata', {
 //                     method: 'POST',
 //                     headers: {
 //                         'Content-Type': 'application/json',
@@ -375,7 +375,7 @@
 //                             setOuruserdata(data.user)
 //                             setUserid(data.user._id)
 
-//                             fetch('http://10.0.2.2:3000/lawotheruserdata', {
+//                             fetch(`${API_KEY}lawotheruserdata', {
 //                                 method: 'POST',
 //                                 headers: {
 //                                     'Content-Type': 'application/json',
@@ -426,7 +426,7 @@
 //             senderid: userid,
 //             recieverid: fuserdata._id
 //         }
-//         fetch('http://10.0.2.2:3000/lawsavemessagetodb', {
+//         fetch(`${API_KEY}lawsavemessagetodb', {
 //             method: 'POST',
 //             headers: {
 //                 'Content-Type': 'application/json',
@@ -462,7 +462,7 @@
 
 
 //     const loadMessages = (temproomid) => {
-//         fetch('http://10.0.2.2:3000/lawgetmessages', {
+//         fetch(`${API_KEY}lawgetmessages', {
 //             method: 'POST',
 //             headers: {
 //                 'Content-Type': 'application/json',
@@ -698,7 +698,7 @@ const MessagePage = ({ navigation, route }) => {
     const loaddata = async () => {
         AsyncStorage.getItem('user')
             .then(async (value) => {
-                fetch('http://10.0.2.2:3000/userdata', {
+                fetch(`${API_KEY}userdata', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -712,7 +712,7 @@ const MessagePage = ({ navigation, route }) => {
                             setOuruserdata(data.user)
                             setUserid(data.user._id)
 
-                            fetch('http://10.0.2.2:3000/lawotheruserdata', {
+                            fetch(`${API_KEY}lawotheruserdata', {
                                 method: 'POST',
                                 headers: {
                                     'Content-Type': 'application/json',
@@ -768,7 +768,7 @@ const MessagePage = ({ navigation, route }) => {
             senderid: userid,
             recieverid: fuserdata._id
         }
-        fetch('http://10.0.2.2:3000/lawsavemessagetodb', {
+        fetch(`${API_KEY}lawsavemessagetodb', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -805,7 +805,7 @@ const MessagePage = ({ navigation, route }) => {
 
 
     const loadMessages = (temproomid) => {
-        fetch('http://10.0.2.2:3000/lawgetmessages', {
+        fetch(`${API_KEY}lawgetmessages', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

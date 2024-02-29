@@ -30,7 +30,7 @@
 //             return;
 //         }
 //         else {
-//             fetch('http://10.0.2.2:3000/verify', {
+//             fetch(`${API_KEY}verify', {
 //                 method: 'POST',
 //                 headers: {
 //                     'Content-Type': 'application/json'
@@ -319,7 +319,7 @@ const Sendtobackend = () => {
             return;
         }
         else {
-            fetch('http://10.0.2.2:3000/signup', {
+            fetch(`${API_KEY}signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

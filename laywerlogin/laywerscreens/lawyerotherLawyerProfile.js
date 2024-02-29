@@ -29,7 +29,7 @@
 //     const { user } = route.params
 //     // console.log(user)
 //     const loaddata = async () => {
-//         fetch('http://10.0.2.2:3000/lawotheruserdata', {
+//         fetch(`${API_KEY}lawotheruserdata', {
 //             method: 'POST',
 //             headers: {
 //                 'Content-Type': 'application/json',
@@ -66,7 +66,7 @@
 //         console.log('FollowThisUser')
 //         const loggeduser = await AsyncStorage.getItem('user');
 //         const loggeduserobj = JSON.parse(loggeduser);
-//         fetch('http://10.0.2.2:3000/lawfollowuser', {
+//         fetch(`${API_KEY}lawfollowuser', {
 //             method: 'POST',
 //             headers: {
 //                 'Content-Type': 'application/json'
@@ -108,7 +108,7 @@
 //         AsyncStorage.getItem('user')
 //             .then(loggeduser => {
 //                 const loggeduserobj = JSON.parse(loggeduser);
-//                 fetch('http://10.0.2.2:3000/lawcheckfollow', {
+//                 fetch(`${API_KEY}lawcheckfollow', {
 //                     method: 'POST',
 //                     headers: {
 //                         'Content-Type': 'application/json'
@@ -144,7 +144,7 @@
 //         console.log('UnfollowThisUser')
 //         const loggeduser = await AsyncStorage.getItem('user');
 //         const loggeduserobj = JSON.parse(loggeduser);
-//         fetch('http://10.0.2.2:3000/lawunfollowuser', {
+//         fetch(`${API_KEY}lawunfollowuser', {
 //             method: 'POST',
 //             headers: {
 //                 'Content-Type': 'application/json'
@@ -427,7 +427,7 @@
 //     const { user } = route.params
 //     // console.log(user)
 //     const loaddata = async () => {
-//         fetch('http://10.0.2.2:3000/lawotheruserdata', {
+//         fetch(`${API_KEY}lawotheruserdata', {
 //             method: 'POST',
 //             headers: {
 //                 'Content-Type': 'application/json',
@@ -464,7 +464,7 @@
 //         console.log('FollowThisUser')
 //         const loggeduser = await AsyncStorage.getItem('user');
 //         const loggeduserobj = JSON.parse(loggeduser);
-//         fetch('http://10.0.2.2:3000/lawfollowuser', {
+//         fetch(`${API_KEY}lawfollowuser', {
 //             method: 'POST',
 //             headers: {
 //                 'Content-Type': 'application/json'
@@ -505,7 +505,7 @@
 //         AsyncStorage.getItem('user')
 //             .then(loggeduser => {
 //                 const loggeduserobj = JSON.parse(loggeduser);
-//                 fetch('http://10.0.2.2:3000/lawcheckfollow', {
+//                 fetch(`${API_KEY}lawcheckfollow', {
 //                     method: 'POST',
 //                     headers: {
 //                         'Content-Type': 'application/json'
@@ -541,7 +541,7 @@
 //         console.log('UnfollowThisUser')
 //         const loggeduser = await AsyncStorage.getItem('user');
 //         const loggeduserobj = JSON.parse(loggeduser);
-//         fetch('http://10.0.2.2:3000/lawunfollowuser', {
+//         fetch(`${API_KEY}lawunfollowuser', {
 //             method: 'POST',
 //             headers: {
 //                 'Content-Type': 'application/json'
@@ -839,7 +839,7 @@ const LawyerOtherLawyerProfile = ({ navigation, route }) => {
     const { user } = route.params
     // console.log(user)
     const loaddata = async () => {
-        fetch('http://10.0.2.2:3000/lawotheruserdata', {
+        fetch(`${API_KEY}lawotheruserdata', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -876,7 +876,7 @@ const LawyerOtherLawyerProfile = ({ navigation, route }) => {
         console.log('FollowThisUser')
         const loggeduser = await AsyncStorage.getItem('user');
         const loggeduserobj = JSON.parse(loggeduser);
-        fetch('http://10.0.2.2:3000/lawfollowuser', {
+        fetch(`${API_KEY}lawfollowuser', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -918,7 +918,7 @@ const LawyerOtherLawyerProfile = ({ navigation, route }) => {
         AsyncStorage.getItem('user')
             .then(loggeduser => {
                 const loggeduserobj = JSON.parse(loggeduser);
-                fetch('http://10.0.2.2:3000/lawcheckfollow', {
+                fetch(`${API_KEY}lawcheckfollow', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -954,7 +954,7 @@ const LawyerOtherLawyerProfile = ({ navigation, route }) => {
         console.log('UnfollowThisUser')
         const loggeduser = await AsyncStorage.getItem('user');
         const loggeduserobj = JSON.parse(loggeduser);
-        fetch('http://10.0.2.2:3000/lawunfollowuser', {
+        fetch(`${API_KEY}lawunfollowuser', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

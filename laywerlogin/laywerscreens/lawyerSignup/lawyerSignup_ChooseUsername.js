@@ -17,7 +17,7 @@ const LawyerSignup_ChooseUsername = ({ navigation, route }) => {
         }
         else {
             setLoading(true)
-            fetch('http://10.0.2.2:3000/lawchangeusername', {
+            fetch(`${API_KEY}lawchangeusername', {
                 method: 'post',
                 headers: {
                     'Content-Type': 'application/json'

@@ -20,7 +20,7 @@ const ForgotPassword_ChoosePassword = ({ navigation, route }) => {
 
         else {
             setLoading(true);
-            fetch('http://10.0.2.2:3000/resetpassword', {
+            fetch(`${API_KEY}resetpassword', {
 
                 method: 'POST',
                 headers: {

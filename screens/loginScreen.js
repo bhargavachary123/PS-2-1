@@ -27,7 +27,7 @@
 //         return;
 //     }
 //     else {
-//                   fetch('http://10.0.2.2:3000/signin', {
+//                   fetch(`${API_KEY}signin', {
 //                       method: 'POST',
 //                       headers: {
 //                           'Content-Type': 'application/json'
@@ -213,6 +213,7 @@ import { containerFull, hr80, logo1 } from './CommonCss/pagecss'
 import { formbtn, formHead, formInput, formTextLinkCenter, formTextLinkRight } from './CommonCss/formcss'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 const image={uri:"https://mc.webpcache.epapr.in/mcms.php?size=large&in=https://mcmscache.epapr.in/post_images/website_350/post_30210858/full.jpg"};
+import { API_KEY } from '../env';
 
 const LoginScreen = ({ navigation }) => {
     const [email, setEmail] = React.useState('')
@@ -225,7 +226,8 @@ const LoginScreen = ({ navigation }) => {
         }
         else {
             setLoading(true)
-            fetch('http://10.0.2.2:3000/signin', {
+            console.log(API_KEY)
+            fetch(`${API_KEY}signin`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -250,6 +252,7 @@ const LoginScreen = ({ navigation }) => {
                 .catch(err => {
                     setLoading(false)
                     alert(err)
+                    console.log("hi",API_KEY)
                 })
         }
         // navigation.navigate('MainPage')

@@ -49,7 +49,7 @@ const LawyerUploadProfilePicture = ({ navigation }) => {
                 setLoading(true)
 
                 pickImage().then(url => {
-                    fetch('http://10.0.2.2:3000/lawsetprofilepic', {
+                    fetch(`${API_KEY}lawsetprofilepic', {
                         method: 'post',
                         headers: {
                             'Content-Type': 'application/json'

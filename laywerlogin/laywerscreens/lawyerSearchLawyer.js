@@ -13,7 +13,7 @@
 //     const getallusers = async () => {
 //         if (keyword.length > 0) {
 //             setLoading(true)
-//             fetch('http://10.0.2.2:3000/searchuser', {
+//             fetch(`${API_KEY}searchuser', {
 //                 method: 'POST',
 //                 headers: {
 //                     'Content-Type': 'application/json'
@@ -155,7 +155,7 @@ const LawyerSearchlawyer = ({ navigation }) => {
     const getallusers = async () => {
         if (keyword.length > 0) {
             setLoading(true)
-            fetch('http://10.0.2.2:3000/searchuser', {
+            fetch(`${API_KEY}searchuser', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

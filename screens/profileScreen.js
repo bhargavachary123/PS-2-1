@@ -11,7 +11,7 @@ export default function ProfileScreen({navigation}) {
     const loaddata = async () => {
         AsyncStorage.getItem('user')
             .then(async (value) => {
-                fetch('http://10.0.2.2:3000/userdata', {
+                fetch(`${API_KEY}userdata', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

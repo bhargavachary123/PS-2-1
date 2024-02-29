@@ -21,7 +21,7 @@ const LawyerChangePassword = ({ navigation }) => {
             setLoading(true)
             AsyncStorage.getItem('user')
                 .then(data => {
-                    fetch('http://10.0.2.2:3000/lawchangepassword', {
+                    fetch(`${API_KEY}lawchangepassword', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',

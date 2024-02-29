@@ -22,7 +22,7 @@ const Signup_ChoosePassword = ({ navigation, route }) => {
         }
         else {
             setLoading(true)
-            fetch('http://10.0.2.2:3000/signup', {
+            fetch(`${API_KEY}signup`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

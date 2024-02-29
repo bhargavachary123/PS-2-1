@@ -114,7 +114,7 @@ export default function LawyerProfileScreen({navigation}) {
     const loaddata = async () => {
         AsyncStorage.getItem('user')
             .then(async (value) => {
-                fetch('http://10.0.2.2:3000/lawuserdata', {
+                fetch(`${API_KEY}lawuserdata', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

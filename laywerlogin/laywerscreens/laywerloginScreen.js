@@ -27,7 +27,7 @@
 //             setErrormsg('All fields are required');
 //             return;
 //         } else {
-//             fetch('http://10.0.2.2:3000/signin', {
+//             fetch(`${API_KEY}signin', {
 //                 method: 'POST',
 //                 headers: {
 //                     'Content-Type': 'application/json'
@@ -220,7 +220,7 @@
 //         }
 //         else {
 //             setLoading(true)
-//             fetch('http://10.0.2.2:3000/lawsignin', {
+//             fetch(`${API_KEY}lawsignin', {
 //                 method: 'POST',
 //                 headers: {
 //                     'Content-Type': 'application/json'
@@ -434,7 +434,7 @@ const LawyerLoginScreen = ({ navigation }) => {
         }
         else {
             setLoading(true)
-            fetch('http://10.0.2.2:3000/lawsignin', {
+            fetch(`${API_KEY}lawsignin', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

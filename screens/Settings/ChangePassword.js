@@ -22,7 +22,7 @@ const ChangePassword = ({ navigation }) => {
             setLoading(true)
             AsyncStorage.getItem('user')
                 .then(data => {
-                    fetch('http://10.0.2.2:3000/changepassword', {
+                    fetch(`${API_KEY}changepassword`, {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
